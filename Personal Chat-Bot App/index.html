@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Home | Chatbot App.</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <section class="slider-body">
+        <!-- Opening Slideshow -->
+    <!-- Slider Start -->
+    <div class="slider">
+        <div class="slides">
+            <!-- Radio Slider -->
+                <input type="radio" id="radio1" name="radio-btn">
+                <input type="radio" id="radio2" name="radio-btn">
+                <input type="radio" id="radio3" name="radio-btn">
+                <input type="radio" id="radio4" name="radio-btn">
+            <!-- End Radio -->
+            <!-- Slider Images -->
+                <div class="slide first">
+                    <img src="Assets/Images/1.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Assets/Images/2.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Assets/Images/3.jpeg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Assets/Images/4.jpeg" alt="">
+                </div>
+                <!-- Slider Images End -->
+                <!-- Auto Nav -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!-- Auto Nav End -->
+        </div>
+        <!-- Manual Nav -->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        <!-- Manual Nav End -->
+    </div>
+<!-- Slider end -->
+    </section>
+    <div class="next-btn">
+        <button id="nextpageBtn">
+            Use ChatBot
+        </button>
+    </div>
+
+    <script src="slider.js"></script>
+</body>
+</html>
