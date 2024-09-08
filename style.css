@@ -24,14 +24,18 @@ background: hsl(0, 0%, 98%);
     padding: 5px 5px;
     display: flex;
     justify-content: center;
+    margin: 5px;
+    border-radius: 20px;
  }
  .chat-container .chat.outgoing{
 background: var(--outgoing-chat-bg);
 border: 1px solid var(--outgoing-chat-border);
+margin-top: 5px;
  }
  .chat-container .chat.incoming{
     background: var(--incoming-chat-bg);
     border: 1px solid var(--incoming-chat-border);
+    /* display: flex; */
      }
  .chat .chat-content{
     display: flex;
