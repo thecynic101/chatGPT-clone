@@ -95,6 +95,10 @@ body {
     font-size: 1rem;
     padding: 0 50px 0 25px;
 }
+
+.chat .chat-details p.error{
+    color: red;
+}
 span.material-symbols-outlined {
     user-select: none;
     cursor: pointer;
