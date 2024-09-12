@@ -22,7 +22,7 @@ In this solution, the user should be able to:
 ### Links
 
 - Solution URL: [GitHub Repo](https://github.com/thecynic101/chatGPT-clone/tree/faith)
-- Live Site URL: [GitHub live site URL]()
+- Live Site URL: [GitHub live site URL](https://thecynic101.github.io/chatGPT-clone/)
 
 ---
 ## My process
