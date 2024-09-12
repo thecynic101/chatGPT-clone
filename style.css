@@ -16,6 +16,7 @@
     --text-area: #58575E;
 }
 .light-mode {
+        background-image: url(Assets/Images/bg-light.jpg);
     --outgoing-chat-bg: #cacbc6;
     --incoming-chat-bg: #bbbcb7;
     --outgoing-chat-border: #1A91D2;
