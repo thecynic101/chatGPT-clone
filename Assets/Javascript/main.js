@@ -12,7 +12,7 @@ const loadDataFromLocalStorage = () => {
     const themeColor = localStorage.setItem("theme-color")
     
     document.body.classList.toggle("light-mode", "themeColor" === "light_mode");
-    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark-mode" : "light_mode"
+    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode"
     chatContainer.scrollTo(0, chatContainer.scrollHeight)
     
     chatContainer.innerHTML = localStorage.getItem("all-chats")
