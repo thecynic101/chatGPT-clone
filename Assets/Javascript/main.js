@@ -6,7 +6,7 @@ const deleteButton = document.querySelector("#delete-btn");
 
 
 let userText = null;
-const API_KEY = "";
+const API_KEY = "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";
 
 const loadDataFromLocalStorage = () => {
     const themeColor = localStorage.setItem("theme-color")
@@ -26,6 +26,7 @@ const createElement= (html, className) => {
 }
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 
 const getChatResponse = async() => {
     const API_URL = "https://api.openai.com/v1/completions";
@@ -88,37 +89,28 @@ const showTypingAnimation = () => {
                         <div class="typing-dot" style="--delay: 0.4s"></div>
                     </div>
                 </div>
-                <span onclick = "copyResponse(this)" class="material-symbols-outlined">content_copy</span>
+                <span class="material-symbols-outlined">content_copy</span>
             </div>`;    
-    const incomingChatDiv = createElement(html, "incoming");
-    chatContainer.appendChild(incomingChatDiv);
-     getChatResponse(incomingChatDiv);
-    chatContainer.scrollTo(0, chatContainer.scrollHeight)
+    const outgoingChatDiv = createElement(html, "incoming");
+    chatContainer.appendChild(outgoingChatDiv);
 
+    getChatResponse();
 }
 
 const handleOutgoingChat = () => {
     userText = chatInput.value.trim();
-    if(!userText) return;
-
-const initialHeight = chatInput.scrollHeight;
-
-    chatInput.value = ""
-    chatInput.style.height = `${initialHeight}px`
-
-
     const html = `<div class="chat-content">
                     <div class="chat-details">
                         <img src="Assets/Images/user2.jpg" alt="" srcset="">
-                        <p></p>
+                        <p>${userText}</p>
                     </div>
                 </div>`;    
     const outgoingChatDiv = createElement(html, "outgoing");
-    outgoingChatDiv.querySelector("p").textContent = userText
     chatContainer.appendChild(outgoingChatDiv);
-    chatContainer.scrollTo(0, chatContainer.scrollHeight)
     setTimeout(showTypingAnimation, 500);
+    chatInput.value = "";
 }
+sendButton.addEventListener("click", handleOutgoingChat);
 
 themeButton.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
@@ -127,11 +119,12 @@ themeButton.addEventListener("click", () => {
 })
 
 deleteButton.addEventListener("click", () => {
-    if(confirm =("are you sure you want to delete all your chats?")){
-        localStorage.removeItem("all-chats")
-        loadDataFromLocalStorage()
+    if (confirm = ("Are you sure you want to delete all your chats?")) {
+      localStorage.removeItem("all-chats");
+      chatContainer.innerHTML = "";
+      loadDataFromLocalStorage();
     }
-})
+  });
 
 const initialHeight = chatInput.scrollHeight;
 
@@ -145,6 +138,3 @@ chatInput.addEventListener("keydown", () =>{
     handleOutgoingChat()
    }
 })
-
-
-sendButton.addEventListener("click", handleOutgoingChat);
