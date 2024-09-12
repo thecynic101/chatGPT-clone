@@ -14,7 +14,9 @@ In this solution, the user should be able to:
 - Delete chat history.
 ---
 ### Screenshots
-
+![Web screenshot 1](Assets/Images/sc1.png)
+![Web screenshot 2](Assets/Images/sc2.png)
+![Web screenshot 3](Assets/Images/sc3.png)
 
 ---
 ### Links
